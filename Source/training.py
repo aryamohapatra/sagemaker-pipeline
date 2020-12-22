@@ -29,7 +29,7 @@ def upload_to_s3(channel, file):
     data = open(file, "rb")
     key = channel + '/' + file
     s3.Bucket(bucket).put_object(Key=key, Body=data)
- 
+
 # caltech-256
 print ("Downloadng Training Data")
 download('http://data.mxnet.io/data/caltech-256/caltech-256-60-train.rec')
