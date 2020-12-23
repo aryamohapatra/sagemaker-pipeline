@@ -21,7 +21,7 @@ endpoint_name = endpoint_name + "-" + commit_id + "-" + timestamp
 
 runtime = boto3.client('runtime.sagemaker') 
 
-wget.download("http://www.vision.caltech.edu/Image_Datasets/Caltech256/images/008.bathtub/008_0007.jpg", "test.jpg")
+wget.download("http://www.vision.caltech.edu.s3-us-west-2.amazonaws.com/pmoreels/Datasets/Home_Objects_06/Train/P1020623.JPG", "test.jpg")
 
 
 with open("test.jpg", 'rb') as f:
