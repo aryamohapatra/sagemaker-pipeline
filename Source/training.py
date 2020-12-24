@@ -122,7 +122,7 @@ training_params = \
 }
 print('Training job name: {}'.format(job_name))
 print('\nInput Data Location: {}'.format(training_params['InputDataConfig'][0]['DataSource']['S3DataSource']))
-'''
+
 # create the Amazon SageMaker training job
 sagemaker = boto3.client(service_name='sagemaker')
 sagemaker.create_training_job(**training_params)
@@ -143,7 +143,7 @@ except:
     message = sagemaker.describe_training_job(TrainingJobName=job_name)['FailureReason']
     print('Training failed with the following error: {}'.format(message))
 
-'''
+
 # creating configuration files so we can pass parameters to our sagemaker endpoint cloudformation
 
 config_data_qa = {
